@@ -8,6 +8,7 @@
   padding: 50px 20px;
   background-color: #383b42;
   /* padding-inline-start: 22.575rem; */
+  border-radius: 10px;
 }
 
 .search-input {
@@ -38,13 +39,4 @@
 .meme-img:hover {
   transform: translateY(-2px);
   box-shadow: 3px 3px 10px black;
-}
-
-.control-meme-text-container {
-  padding-inline-start: 8.575rem;
-  padding-block-start: 1.19375rem;
-}
-
-.control-meme-text-container .btn {
-  padding-left: 1.25rem;
 }

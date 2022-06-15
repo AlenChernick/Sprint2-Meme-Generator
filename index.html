@@ -26,16 +26,16 @@
             <canvas class="main-editor-canvas" width="500" height="500"></canvas>
             <img src="" alt="" class="selected-meme" />
             <div class="editor-tools">
-                <input type="text" class="meme-text" placeholder="Enter Meme Text" oninput="getUserTextInput()" />
-                <section class="control-meme-text-container flex">
-                <div class="btn move-up"><img src="img/move-up.png" alt=""></div>
-                <div class="btn move-down"><img src="img/move-down.png" alt=""></div>
+                <input type="text" class="meme-text" placeholder="Enter Meme Text" oninput="onUpdateTxt(this.value)" />
+                <section class="control-meme-text-container flex content-center">
+                <div class="btn move-up"><img src="img/move-up.png" alt="" onclick="onMoveLine(-1)"></div>
+                <div class="btn move-down"><img src="img/move-down.png" onclick="onMoveLine(+1)" alt=""></div>
                 <div class="btn add-line"><img src="img/add.png" alt=""></div>
                 <div class="btn delete-line"><img src="img/delete.png" alt=""></div>
               </section>
-              <section class="visual-effects-tool-container flex">
-                <div class="increse-text"><img src="img/text-bigger.png" alt="" onclick="increaseUserText()"></div>
-                <div class="decrease-text"><img src="img/text-smaller.png" alt=""></div>
+              <section class="visual-effects-tool-container ">
+                <div class="increse-text"><img src="img/text-bigger.png" alt="" onclick="onChangeFontSize(1)"></div>
+                <div class="decrease-text"><img src="img/text-smaller.png" alt="" onclick="onChangeFontSize(-1)"></div>
                 <div class="align-text-left"><img src="img/Ali-left.png" alt=""></div>
                 <div class="align-text-middle"><img src="img/Center.png" alt=""></div>
                 <div class="align-text-right"><img src="img/Ali-righ.png" alt=""></div>
@@ -44,9 +44,15 @@
                     <option value="arial">Arial</option>
                     <option value="Impact">Impact</option>
                   </select>
+          
             </div>
             <div class="underline"><img src="img/Souligne.png" alt=""></div>
-            <div class="change-color"><img src="img/Color.png" alt=""></div>
+            <div class="change-color">
+              <label><img src="img/Color.png" alt="">
+              <input type="color" class="color-picker" oninput="onChangeColor(this.value)">
+            </label>
+            </div>
+ 
         </div>
     </div>
       </section>
