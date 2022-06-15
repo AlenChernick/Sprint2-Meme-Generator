@@ -1,0 +1,23 @@
+.canvas-container {
+  display: none;
+  position: relative;
+}
+
+.editor-tools {
+  background-color: #ebeef370;
+  width: 43.301875rem;
+  height: 34.125rem;
+  position: absolute;
+  top: 0;
+  left: 650px;
+}
+
+.main-editor-canvas {
+  padding-inline-start: 6.0625rem;
+  padding-inline-end: 5.625rem;
+}
+
+.meme-text {
+  padding: 0.7375rem 8.0375rem;
+  font-size: 1.5625rem;
+}

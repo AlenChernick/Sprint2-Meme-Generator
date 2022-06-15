@@ -1,0 +1,39 @@
+.meme-generator {
+  /* max-width: 1600px; */
+  padding: 0px 20px;
+  margin: 0 auto;
+}
+
+.gallery-container {
+  padding: 50px 20px;
+  background-color: #383b42;
+}
+
+.search-input {
+  background-color: #22252c;
+  border-radius: 29px;
+  width: 33.8125rem;
+  line-height: 3.625rem;
+  margin-bottom: 2.8125rem;
+  padding-left: 1rem;
+  font-size: 1.301875rem;
+  border: none;
+}
+
+.meme-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(199.55px, 1fr));
+  grid-gap: 20px;
+}
+
+.meme-img {
+  max-width: 100%;
+  border-radius: 10px;
+  transition: transform 250ms;
+  cursor: pointer;
+}
+
+.meme-img:hover {
+  transform: translateY(-2px);
+  box-shadow: 3px 3px 10px black;
+}
