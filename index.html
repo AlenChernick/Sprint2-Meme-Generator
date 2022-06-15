@@ -21,14 +21,32 @@
       <div class="gallery-container">
         <input type="text" class="search-input" placeholder="Search" />
         <section class="meme-gallery"></section>
-     
       <section class="meme-editor-container flex">
         <div class="canvas-container ">
             <canvas class="main-editor-canvas" width="500" height="500"></canvas>
             <img src="" alt="" class="selected-meme" />
             <div class="editor-tools">
                 <input type="text" class="meme-text" placeholder="Enter Meme Text" oninput="getUserTextInput()" />
+                <section class="control-meme-text-container flex">
+                <div class="btn move-up"><img src="img/move-up.png" alt=""></div>
+                <div class="btn move-down"><img src="img/move-down.png" alt=""></div>
+                <div class="btn add-line"><img src="img/add.png" alt=""></div>
+                <div class="btn delete-line"><img src="img/delete.png" alt=""></div>
+              </section>
+              <section class="visual-effects-tool-container flex">
+                <div class="increse-text"><img src="img/text-bigger.png" alt="" onclick="increaseUserText()"></div>
+                <div class="decrease-text"><img src="img/text-smaller.png" alt=""></div>
+                <div class="align-text-left"><img src="img/Ali-left.png" alt=""></div>
+                <div class="align-text-middle"><img src="img/Center.png" alt=""></div>
+                <div class="align-text-right"><img src="img/Ali-righ.png" alt=""></div>
+                <div class="drop-down-font">
+                  <select name="fonts" id="">
+                    <option value="arial">Arial</option>
+                    <option value="Impact">Impact</option>
+                  </select>
             </div>
+            <div class="underline"><img src="img/Souligne.png" alt=""></div>
+            <div class="change-color"><img src="img/Color.png" alt=""></div>
         </div>
     </div>
       </section>

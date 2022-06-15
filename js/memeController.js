@@ -6,18 +6,13 @@ let gCtx
 function onInit() {
   gElCanvas = document.querySelector('.main-editor-canvas')
   gCtx = gElCanvas.getContext('2d')
-  //   renderCanvas()
-  renderMemes()
+  renderMemesImgs()
 }
 
 // Render memes on canvas
 function renderCanvas() {
-  let elImg = document.querySelector('.selected-meme')
-
-  elImg.onload = () => {
-    gCtx.drawImage(elImg, 0, 0, gElCanvas.width, gElCanvas.height)
-    getUserTextInput()
-  }
+  renderImgOnCanvas()
+  getUserTextInput()
 }
 
 // Get user text input
@@ -26,6 +21,14 @@ function getUserTextInput() {
   gCtx.font = '30px impact'
   gCtx.fillStyle = 'white'
   gCtx.strokeStyle = 'black'
-  gCtx.fillText(elUserTextInput, 50, 50)
-  gCtx.strokeText(elUserTextInput, 50, 50)
+  gCtx.fillText(elUserTextInput, 150, 50)
+  gCtx.strokeText(elUserTextInput, 150, 50)
+}
+
+// render img on canvas
+function renderImgOnCanvas() {
+  let elImg = document.querySelector('.selected-meme')
+  elImg.onload = () => {
+    gCtx.drawImage(elImg, 0, 0, gElCanvas.width, gElCanvas.height)
+  }
 }

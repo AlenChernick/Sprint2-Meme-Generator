@@ -1,6 +1,6 @@
 'use strict'
 
-function renderMemes() {
+function renderMemesImgs() {
   const imgsIdx = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18]
   const elSelectedMeme = document.querySelector('.selected-meme')
   const elImgGallery = document.querySelector('.meme-gallery')
@@ -19,7 +19,6 @@ function renderMemes() {
       elCanvasContainer.style.display = 'block'
       elSelectedMeme.style.display = 'none'
     })
-
     elImgGallery.appendChild(elImage)
   })
 }

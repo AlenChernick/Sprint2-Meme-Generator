@@ -1,12 +1,13 @@
 .meme-generator {
   /* max-width: 1600px; */
   padding: 0px 20px;
-  margin: 0 auto;
+  /* margin: 0 auto; */
 }
 
 .gallery-container {
   padding: 50px 20px;
   background-color: #383b42;
+  /* padding-inline-start: 22.575rem; */
 }
 
 .search-input {
@@ -18,6 +19,7 @@
   padding-left: 1rem;
   font-size: 1.301875rem;
   border: none;
+  font-family: poppins-light;
 }
 
 .meme-gallery {
@@ -36,4 +38,13 @@
 .meme-img:hover {
   transform: translateY(-2px);
   box-shadow: 3px 3px 10px black;
+}
+
+.control-meme-text-container {
+  padding-inline-start: 8.575rem;
+  padding-block-start: 1.19375rem;
+}
+
+.control-meme-text-container .btn {
+  padding-left: 1.25rem;
 }
