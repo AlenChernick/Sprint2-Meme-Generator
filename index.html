@@ -10,52 +10,60 @@
   <body onload="onInit()">
     <main class="meme-generator">
       <header class="main-header">
-        <nav>
+        <div class='main-layout flex align-center'>
           <ul class="main-nav flex clean-list align-center">
-            <li href="#" class="logo">LOGO</li>
-            <li href="#" class="gallery">Gallery</li>
-            <li href="#" class="about">About</li>
+            <li><a href="#" class="logo">MemeGenerator</a></li>
+            <li><a href="#" class="gallery" onclick="onReturnToGallery()">Gallery</a></li>
+            <li><a href="#" class="about">About</a></li>
           </ul>
-        </nav>
+        </div>
       </header>
       <div class="gallery-container">
-        <input type="text" class="search-input" placeholder="Search" />
+        <div class="filter-by-search-by flex space-between">
+          <input type="text" class="search-input flex" placeholder="Search"/>
+          <div class="sort-by">Funny Animal Men Women comoic smile</div>
+          <div class="more-btn">More</div>
+        </div>
         <section class="meme-gallery"></section>
       <section class="meme-editor-container flex">
-        <div class="canvas-container ">
-            <canvas class="main-editor-canvas" width="500" height="500"></canvas>
+        <div class="canvas-container">
+            <canvas class="main-editor-canvas" width="550" height="598"></canvas>
+            <img src="img/creator-bg.png" class="creator-bg" alt="">
             <img src="" alt="" class="selected-meme" />
             <div class="editor-tools">
                 <input type="text" class="meme-text" placeholder="Enter Meme Text" oninput="onUpdateTxt(this.value)" />
                 <section class="control-meme-text-container flex content-center">
-                <div class="btn move-up"><img src="img/move-up.png" alt="" onclick="onMoveLine(-1)"></div>
-                <div class="btn move-down"><img src="img/move-down.png" onclick="onMoveLine(+1)" alt=""></div>
-                <div class="btn add-line"><img src="img/add.png" alt=""></div>
-                <div class="btn delete-line"><img src="img/delete.png" alt=""></div>
+                <div class="btn move-up"><img src="icons/move-up.png" alt="" onclick="onMoveLine(-1)"></div>
+                <div class="btn move-down"><img src="icons/move-down.png" onclick="onMoveLine(1)" alt=""></div>
+                <div class="btn switch-lines"><img src="icons/switch-line.png" onclick="onSwitchLine()" alt=""></div>
+                <div class="btn add-line"><img src="icons/add.png" alt="" onclick="onAddLine()"></div>
+                <div class="btn delete-line"><img src="icons/delete.png" onclick="onRemoveLine()" alt=""></div>
               </section>
               <section class="visual-effects-tool-container ">
-                <div class="increse-text"><img src="img/text-bigger.png" alt="" onclick="onChangeFontSize(1)"></div>
-                <div class="decrease-text"><img src="img/text-smaller.png" alt="" onclick="onChangeFontSize(-1)"></div>
-                <div class="align-text-left"><img src="img/Ali-left.png" alt=""></div>
-                <div class="align-text-middle"><img src="img/Center.png" alt=""></div>
-                <div class="align-text-right"><img src="img/Ali-righ.png" alt=""></div>
-                <div class="drop-down-font">
-                  <select name="fonts" id="">
-                    <option value="arial">Arial</option>
+                <div class="btn increse-text"><img src="icons/text-bigger.png" alt="" onclick="onChangeFontSize(1)"></div>
+                <div class="btn decrease-text"><img src="icons/text-smaller.png" alt="" onclick="onChangeFontSize(-1)"></div>
+                <div class="btn align-text-left"><img src="icons/Ali-left.png" onclick="onAlignTxtLeft()" alt=""></div>
+                <div class="btn align-text-middle"><img src="icons/Center.png"onclick='onAlignTxtCenter()' alt=""></div>
+                <div class="btn align-text-right"><img src="icons/Ali-righ.png" onclick="onAlignTxtRight()" alt=""></div>
+                <div class="btn drop-down-font">
+                  <select name="fonts" id="" onchange="onChangeFont(this.value)">
                     <option value="Impact">Impact</option>
+                    <option value="arial">Arial</option>
                   </select>
-          
             </div>
-            <div class="underline"><img src="img/Souligne.png" alt=""></div>
+            <div class="btn underline"><img src="icons/Souligne.png" alt=""></div>
             <div class="change-color">
-              <label><img src="img/Color.png" alt="">
-              <input type="color" class="color-picker" oninput="onChangeColor(this.value)">
+              <label><img src="icons/Color.png" alt="">
+              <input type="color" class="btn color-picker" oninput="onChangeColor(this.value)">
             </label>
-            </div>
- 
+          </div>
+        </section>
+        <div class="stickers-container"></div>
+        <div class="download-share-section flex">
+          <img class="btn share" src="icons/share.png" alt="">
+          <img class="btn download" src="icons/Download.png" alt="">
         </div>
-    </div>
-      </section>
+  </section>
     </main>
     <script src="js/service/memeService.js"></script>
     <script src="js/galleryController.js"></script>

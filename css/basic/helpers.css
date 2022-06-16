@@ -6,7 +6,7 @@
   align-items: center;
 }
 
-.flex.space-evenly {
+.flex.space-between {
   justify-content: space-between;
 }
 

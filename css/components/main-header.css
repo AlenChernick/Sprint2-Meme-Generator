@@ -3,14 +3,14 @@
   border-radius: 36.5px;
   height: 4.5625rem;
   margin: 10px 0px;
-  position: relative;
+  /* position: relative; */
   font-family: poppins-medium;
+  min-width: 100%;
+  justify-content: space-around;
 }
 
 .main-nav .logo {
   font-size: 1.355625rem;
-  padding-inline-start: 5.025rem;
-  padding-inline-end: 80.725rem;
   color: white;
   cursor: default;
 }
@@ -22,10 +22,15 @@
   padding: 0.475rem 1.95625rem;
   color: #21ac91;
   cursor: pointer;
+  box-shadow: 0px 3px 10px #00000055;
+  transition: background-color 0.3s;
+}
+
+.main-nav .gallery:hover {
+  background-color: rgba(255, 255, 255, 0.673);
 }
 
 .main-nav .about {
   font-size: 1.301875rem;
   color: white;
-  padding-inline-start: 2.6625rem;
 }

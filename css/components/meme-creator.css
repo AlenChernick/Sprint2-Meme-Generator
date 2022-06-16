@@ -5,7 +5,7 @@
 
 .editor-tools {
   width: 32.8125rem;
-  height: 34.1255rem;
+  height: 38.1255rem;
   position: absolute;
   top: 0;
   left: 650px;
@@ -16,13 +16,22 @@
 }
 
 .main-editor-canvas {
-  padding-inline-start: 25.0625rem;
-  padding-inline-end: 5.625rem;
+  margin-inline-start: 25.0625rem;
+  border-radius: 25px;
+  box-shadow: 0.26px 4.99px 5px #0d0e10;
+}
+
+.creator-bg {
+  position: absolute;
+  left: 22rem;
+  z-index: -1;
+  height: 120%;
+  top: -2rem;
+  border-radius: 1rem;
 }
 
 .meme-text {
-  /* margin: 0 auto; */
-  padding: 0.7375rem 9.0375rem;
+  height: 3.504375rem;
   width: 27.7763rem;
   font-size: 1.5625rem;
   font-family: poppins-medium;
@@ -38,20 +47,54 @@
 
 .visual-effects-tool-container {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(5, 50px);
+  /* grid-template-rows: repeat(2, 1fr); */
   justify-content: center;
   align-content: center;
   background-color: #19a59f;
   width: 27.875rem;
-  height: 9.340625rem;
   margin: 1.5rem auto;
   padding: 1.1rem;
   border-radius: 15px;
-  /* gap: 15px; */
+  gap: 1.20625rem;
+}
+
+.drop-down-font select {
+  width: 11.625rem;
+  height: 3.1225rem;
+  font-size: 1.709375rem;
+  padding-inline-start: 2.00625rem;
+  margin-block-start: 0.2rem;
+  box-shadow: 0.26px 4.99px 1px #707070;
+  border-radius: 10px;
+}
+
+.stickers-container {
+  position: absolute;
+  top: 25.5rem;
+  background-color: #8076fd;
+  border-radius: 44.65px;
+  width: 27.7875rem;
+  height: 89px;
+  margin-block-end: 5rem;
+}
+
+.download-share-section {
+  position: absolute;
+  bottom: 1.675rem;
+  left: 3rem;
+}
+
+.change-color {
+  margin-block-start: 0.2rem;
 }
 
 .drop-down-font {
-  grid-column-start: 2;
+  grid-column-start: 1;
+}
+
+.underline {
+  grid-column-start: 4;
 }
 
 .control-meme-text-container {
@@ -60,4 +103,8 @@
 
 .control-meme-text-container .btn {
   padding-left: 1.25rem;
+}
+
+.btn {
+  cursor: pointer;
 }
