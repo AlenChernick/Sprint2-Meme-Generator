@@ -109,5 +109,4 @@ function onReturnToGallery() {
   elMemeEditor.style.display = 'none'
   elFilterSearch.style.display = 'flex'
   elGallery.style.backgroundColor = '#383b42'
-  elGallery.style.padding = '2.8125rem 4rem'
 }

@@ -4,6 +4,7 @@
 // render all imgs and enter the meme creator and show the clicked img
 function renderGalleryImgs() {
   const imgsIdx = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18]
+  const elMenu = document.querySelector('.menu-open')
   const elGallery = document.querySelector('.gallery-container')
   const elMemeEditor = document.querySelector('.meme-editor-container')
   const elSelectedMeme = document.querySelector('.selected-meme')
@@ -24,7 +25,7 @@ function renderGalleryImgs() {
       elGallery.style.backgroundColor = 'transparent'
       elMemeEditor.style.display = 'flex'
       elFilterSearch.style.display = 'none'
-      elGallery.style.padding = '0'
+      elGallery.style.padding = '1rem'
     })
     elImgGallery.appendChild(elImage)
   })
