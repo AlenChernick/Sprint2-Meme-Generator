@@ -19,7 +19,7 @@ function renderGalleryImgs() {
       elSelectedMeme.src = `img/${imgIdx}.jpg`
       renderCanvas()
       elImgGallery.style.display = 'none'
-      elCanvasContainer.style.display = 'block'
+      elCanvasContainer.style.display = 'flex'
       elSelectedMeme.style.display = 'none'
       elGallery.style.backgroundColor = 'transparent'
       elMemeEditor.style.display = 'flex'
@@ -27,4 +27,9 @@ function renderGalleryImgs() {
     })
     elImgGallery.appendChild(elImage)
   })
+}
+
+// Toggle Menu
+function onToggleMenu() {
+  document.body.classList.toggle('menu-open')
 }

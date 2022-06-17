@@ -6,31 +6,49 @@
   /* position: relative; */
   font-family: poppins-medium;
   min-width: 100%;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .main-nav .logo {
   font-size: 1.355625rem;
   color: white;
   cursor: default;
+  padding-inline-start: 5.5rem;
+}
+
+.main-nav .nav-options {
+  justify-content: space-between;
 }
 
 .main-nav .gallery {
   font-size: 1.301875rem;
-  background-color: white;
-  border-radius: 20px;
-  padding: 0.475rem 1.95625rem;
-  color: #21ac91;
+  color: white;
   cursor: pointer;
-  box-shadow: 0px 3px 10px #00000055;
-  transition: background-color 0.3s;
-}
-
-.main-nav .gallery:hover {
-  background-color: rgba(255, 255, 255, 0.673);
+  padding-inline-start: 1.95625rem;
+  padding-inline-end: 1.95625rem;
+  padding-block-start: 0.475rem;
+  padding-block-end: 0.475rem;
+  border-radius: 20px;
+  transition: color 0.5s border-radius 0.5s;
+  transition: background-color 0.5s;
 }
 
 .main-nav .about {
   font-size: 1.301875rem;
   color: white;
+  margin-inline-start: 1rem;
+  margin-inline-end: 5rem;
+  padding-inline-start: 1.95625rem;
+  padding-inline-end: 1.95625rem;
+  padding-block-start: 0.475rem;
+  padding-block-end: 0.475rem;
+  border-radius: 20px;
+  transition: color 0.5s border-radius 0.5s;
+  transition: background-color 0.5s;
+}
+
+.gallery:hover,
+.about:hover {
+  background-color: white;
+  color: #21ac91;
 }

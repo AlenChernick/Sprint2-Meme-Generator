@@ -1,4 +1,4 @@
 .main-layout {
   box-sizing: content-box;
-  margin: 0 auto;
+  min-width: 100%;
 }

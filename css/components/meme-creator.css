@@ -1,22 +1,20 @@
 .canvas-container {
   display: none;
   position: relative;
+  /* flex-direction: column; */
+  background-color: no-repeat;
 }
 
 .editor-tools {
-  width: 32.8125rem;
-  height: 38.1255rem;
-  position: absolute;
-  top: 0;
-  left: 650px;
-  padding: 1.5125rem 2.51875rem;
-  background-color: #ebeef328;
   border-radius: 29.83px;
-  margin-inline-start: 20.0625rem;
+  background-color: #ebeef328;
+  padding: 1.5125rem 2.51875rem;
+  position: relative;
 }
 
 .main-editor-canvas {
-  margin-inline-start: 25.0625rem;
+  margin-inline-start: 30.0625rem;
+  margin-inline-end: 1rem;
   border-radius: 25px;
   box-shadow: 0.26px 4.99px 5px #0d0e10;
 }
@@ -48,7 +46,6 @@
 .visual-effects-tool-container {
   display: grid;
   grid-template-columns: repeat(5, 50px);
-  /* grid-template-rows: repeat(2, 1fr); */
   justify-content: center;
   align-content: center;
   background-color: #19a59f;
@@ -70,8 +67,8 @@
 }
 
 .stickers-container {
-  position: absolute;
-  top: 25.5rem;
+  position: relative;
+  top: 1.5rem;
   background-color: #8076fd;
   border-radius: 44.65px;
   width: 27.7875rem;
@@ -80,9 +77,9 @@
 }
 
 .download-share-section {
-  position: absolute;
-  bottom: 1.675rem;
-  left: 3rem;
+  position: relative;
+  bottom: 1rem;
+  left: 1rem;
 }
 
 .change-color {

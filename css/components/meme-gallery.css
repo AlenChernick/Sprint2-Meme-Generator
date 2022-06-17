@@ -31,22 +31,29 @@ input.search-input {
 }
 
 .sort-by {
-  width: 33.5rem;
-  height: 3.125rem;
+  /* box-sizing: content-box; */
+  height: 3.625rem;
   background-color: #c2c2c2b6;
-  font-size: 1.223125rem;
+
+  padding-inline-start: 10rem;
+  padding-inline-end: 5rem;
+  padding-block-start: 0.5rem;
+  padding-block-end: 1.5rem;
   color: white;
-  border-radius: 25px;
-  padding: 0.63125rem 1.49375rem;
+  border-radius: 50px;
   font-family: poppins-regular;
 }
 
 .more-btn {
-  height: 3.25rem;
+  height: 2.5rem;
   border-radius: 18px;
   font-family: poppins-light;
   color: white;
-  padding: 0.6rem 2rem;
+  padding-inline-start: 2rem;
+  padding-inline-end: 2rem;
+  padding-block-start: 0.3rem;
+  margin-block-start: 0.5rem;
+  margin-inline-start: 9rem;
   font-size: 1.19875rem;
   background: linear-gradient(90deg, rgba(12, 152, 185, 1) 0%, rgba(51, 190, 109, 1) 100%);
 }
@@ -60,7 +67,7 @@ input.search-input {
 .meme-img {
   max-width: 100%;
   border-radius: 10px;
-  transition: transform 250ms;
+  transition: transform 0.5s box-shadow 0.2s;
   cursor: pointer;
 }
 

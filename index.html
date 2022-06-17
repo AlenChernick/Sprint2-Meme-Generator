@@ -8,26 +8,34 @@
     <title>Meme Generator</title>
   </head>
   <body onload="onInit()">
+    <div class="main-screen" onclick="onToggleMenu()"></div>
     <main class="meme-generator">
       <header class="main-header">
         <div class='main-layout flex align-center'>
           <ul class="main-nav flex clean-list align-center">
-            <li><a href="#" class="logo">MemeGenerator</a></li>
-            <li><a href="#" class="gallery" onclick="onReturnToGallery()">Gallery</a></li>
-            <li><a href="#" class="about">About</a></li>
+            <div class="main-logo">
+              <li><a href="#" class="logo">MemeGenerator</a></li>
+            </div>
+            <div class="nav-options flex">
+              <li><a href="#" class="gallery" onclick="onReturnToGallery()">Gallery</a></li>
+              <li><a href="#" class="about">About</a></li>
+            </div>
+            <button onclick="onToggleMenu()" class="menu-toggle"><span class="menu-icon">☰</span></button>
           </ul>
         </div>
       </header>
       <div class="gallery-container">
         <div class="filter-by-search-by flex space-between">
           <input type="text" class="search-input flex" placeholder="Search"/>
-          <div class="sort-by">Funny Animal Men Women comoic smile</div>
-          <div class="more-btn">More</div>
+          <div class="filter-by-more-btn-container flex">
+            <div class="sort-by">Funny Animal Men Women comoic smile</div>
+            <div class="more-btn">More</div>
+          </div>
         </div>
         <section class="meme-gallery"></section>
-      <section class="meme-editor-container flex">
+      <section class="meme-editor-container">
         <div class="canvas-container">
-            <canvas class="main-editor-canvas" width="550" height="598"></canvas>
+            <canvas class="main-editor-canvas flex" width="550" height="598"></canvas>
             <img src="img/creator-bg.png" class="creator-bg" alt="">
             <img src="" alt="" class="selected-meme" />
             <div class="editor-tools">
@@ -50,7 +58,7 @@
                     <option value="Impact">Impact</option>
                     <option value="arial">Arial</option>
                   </select>
-            </div>
+                </div>
             <div class="btn underline"><img src="icons/Souligne.png" alt=""></div>
             <div class="change-color">
               <label><img src="icons/Color.png" alt="">
