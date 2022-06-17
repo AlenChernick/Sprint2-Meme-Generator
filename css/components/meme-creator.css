@@ -13,8 +13,6 @@
 }
 
 .main-editor-canvas {
-  margin-inline-start: 30.0625rem;
-  margin-inline-end: 1rem;
   border-radius: 25px;
   box-shadow: 0.26px 4.99px 5px #0d0e10;
 }
@@ -23,9 +21,11 @@
   position: absolute;
   left: 22rem;
   z-index: -1;
-  height: 120%;
-  top: -2rem;
-  border-radius: 1rem;
+  height: 100%;
+  top: 0rem;
+  border-radius: 5rem;
+  opacity: 0.1;
+  background-color: rgb(255, 255, 255);
 }
 
 .meme-text {
@@ -34,13 +34,16 @@
   font-size: 1.5625rem;
   font-family: poppins-medium;
   text-align: center;
+
   border-radius: 28.04px;
   box-shadow: inset 0px 5px 5px silver;
   box-shadow: 0.26px 4.99px 1px #bbc4d1;
 }
 
-.change-color input[type='color'] {
-  display: none;
+.change-color input {
+  position: absolute;
+  top: 20rem;
+  z-index: -1;
 }
 
 .visual-effects-tool-container {
