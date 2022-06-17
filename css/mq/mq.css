@@ -29,6 +29,10 @@
     opacity: 0;
   }
 
+  .meme-gallery.shown .gallery-container {
+    padding: 2.8125rem 4rem;
+  }
+
   .main-logo .logo {
     padding-inline-start: 2rem;
   }
@@ -113,14 +117,33 @@
   .visual-effects-tool-container {
     flex-direction: column;
     width: 100%;
-  }
-
-  .visual-effects-tool-container .btn {
-    width: 1%;
+    grid-template-columns: repeat(5, 35px);
+    padding-inline-end: 2.5rem;
   }
 
   .meme-text {
     max-width: 100%;
+  }
+
+  .stickers-container {
+    max-width: 100%;
+  }
+
+  .download-share-section {
+    flex-direction: column;
+    left: 0;
+  }
+
+  .download-share-section .share {
+    margin-block-end: 1rem;
+  }
+
+  .control-meme-text-container {
+    padding-inline-end: 2rem;
+  }
+
+  .control-meme-text-container .btn {
+    width: 25%;
   }
 
   .canvas-container {

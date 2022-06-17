@@ -24,6 +24,7 @@ function renderGalleryImgs() {
       elGallery.style.backgroundColor = 'transparent'
       elMemeEditor.style.display = 'flex'
       elFilterSearch.style.display = 'none'
+      elGallery.style.padding = '0'
     })
     elImgGallery.appendChild(elImage)
   })
