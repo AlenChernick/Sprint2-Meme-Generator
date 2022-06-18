@@ -1,7 +1,12 @@
 'use stirct'
 
+// Global variables
+let gStartPos
+
+
 function onInit() {
   renderGalleryImgs()
+  renderStickers()
 }
 
 // render img on canvas
@@ -15,6 +20,14 @@ function renderCanvas() {
   const meme = getMeme()
   renderImgOnCanvas()
   drawText(meme.lines)
+}
+
+// Render Stickers to the stickers container
+function renderStickers() {
+  const stickers = getStickers()
+  const strHtml = stickers.map((sticker) => `<span onclick="onAddLine('${sticker}')">${sticker}</span>`)
+  document.querySelector('.stickers-container').innerHTML = strHtml.join('')
+  // console.log(document.querySelector('.stickers-container'));
 }
 
 // Get user text input
@@ -47,8 +60,9 @@ function onMoveLine(plusOrMinus) {
 
 // Add new line txt
 
-function onAddLine() {
-  addLine()
+function onAddLine(text = '') {
+  if (text) addLine(text)
+  else addLine()
   renderCanvas()
 }
 
@@ -109,3 +123,8 @@ function onReturnToGallery() {
   elFilterSearch.style.display = 'flex'
   elGallery.style.backgroundColor = '#383b42'
 }
+
+
+
+
+

@@ -71,13 +71,23 @@
 }
 
 .stickers-container {
-  position: relative;
-  top: 1.5rem;
+  font-size: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: #8076fd;
   border-radius: 44.65px;
-  width: 27.7875rem;
   height: 89px;
-  margin-block-end: 5rem;
+  margin-block-end: 2.5rem;
+}
+
+.stickers-container span {
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.stickers-container span:hover {
+  transform: translateY(-2px);
 }
 
 .download-share-section {
@@ -108,7 +118,7 @@
 
 .btn {
   cursor: pointer;
-  transition: filter 0.5s;
+  transition: 0.5s;
 }
 
 .btn:hover {

@@ -6,7 +6,6 @@
   }
 
   .gallery-container {
-    /* background-color: transparent; */
     z-index: -1;
   }
 
@@ -87,18 +86,14 @@
   }
 
   .more-btn {
-    padding-inline-start: 0.5rem;
-    padding-inline-end: 0.5rem;
-    margin-left: 0;
+    padding-inline-start: 1rem;
+    padding-inline-end: 1rem;
+    margin-left: -0.5rem;
   }
 
   .gallery-container {
     margin: 0.5rem;
     padding: 1rem;
-  }
-
-  .creator-bg {
-    display: none;
   }
 
   .meme-generator {
@@ -134,7 +129,7 @@
   }
 
   .stickers-container {
-    max-width: 100%;
+    font-size: 1.6rem;
   }
 
   .download-share-section {
@@ -158,8 +153,13 @@
     z-index: 0;
   }
 
+  .creator-bg {
+    display: none;
+  }
+
   .meme-gallery {
     grid-template-columns: repeat(2, 1fr);
+    padding: 2rem 0.2rem;
   }
 }
 
@@ -191,6 +191,9 @@
   }
 
   .menu-toggle {
+    display: none;
+  }
+  .creator-bg {
     display: none;
   }
 }

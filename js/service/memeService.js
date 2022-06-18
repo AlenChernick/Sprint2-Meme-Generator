@@ -2,7 +2,9 @@
 
 // global variables
 let gIsDownload = false
-
+const gStickers = [
+  '😀', '😂', '😃', '😚', '😏', '😘', '🙄'
+]
 
 // Global Canvas and context
 const gElCanvas = document.querySelector('.main-editor-canvas')
@@ -20,11 +22,21 @@ const gMeme = {
       font: 'Impact',
       x: gElCanvas.width / 4,
       y: 50,
+      isDrag: false,
     },
   ],
 }
 
 
+// Return Global Meme
+function getMeme() {
+  return gMeme
+}
+
+// Get Stickers Array
+function getStickers() {
+  return gStickers
+}
 
 // Draw the text
 function drawText(userTxt) {
@@ -51,11 +63,6 @@ function drawSquareOutline(userTxt) {
   gCtx.stroke()
 }
 
-// Return Global Meme
-function getMeme() {
-  return gMeme
-}
-
 
 // Get meme line index
 function memeIdx() {
@@ -80,7 +87,7 @@ function changeFontSize(plusOrMinus) {
 
 // Get meme line text and changes depends on user click
 function moveLine(plusOrMinus) {
-  gMeme.lines[memeIdx()].y += 5 * plusOrMinus
+  gMeme.lines[memeIdx()].y += 25 * plusOrMinus
 }
 
 // Align meme text to left side
@@ -107,47 +114,59 @@ function changeFont(font) {
   gMeme.lines[memeIdx()].font = font
 }
 
-// Add new line text up to 3 times on bottom and on middle
-function addLine() {
-  if (gMeme.selectedLineIdx === 2) return
-  gMeme.selectedLineIdx++
-  if (gMeme.selectedLineIdx === 1) {
+// Add new line text up / emoji up to 10 times 
+function addLine(text = 'Enter Meme Text') {
+  if (gMeme.selectedLineIdx === 10) return
+  if (gMeme.selectedLineIdx === 0) {
     gMeme.lines.push({
-      txt: 'Enter Meme Text',
+      txt: text,
       size: 35,
       color: 'white',
       font: 'Impact',
       x: gElCanvas.width / 4,
       y: gElCanvas.height / 1.1,
     })
+
   }
-  if (gMeme.selectedLineIdx === 2) {
+  else if (gMeme.selectedLineIdx === 1) {
     gMeme.lines.push({
-      txt: 'Enter Meme Text',
+      txt: text,
       size: 35,
       color: 'white',
       font: 'Impact',
       x: gElCanvas.width / 4,
       y: gElCanvas.height / 2,
     })
-  }
 
-  // console.log(gMeme.selectedLineIdx)
-  // console.log(gMeme.lines)
+  }
+  else {
+    let y = gMeme.lines[memeIdx()].y + 50
+    if (y > gElCanvas.height) y = 0
+    gMeme.lines.push({
+      txt: text,
+      size: 35,
+      color: 'white',
+      font: 'Impact',
+      x: gElCanvas.width / 4,
+      y,
+    })
+  }
+  gMeme.selectedLineIdx++
 }
+
 
 // Remove Text Line
 function removeLine() {
   if (gMeme.selectedLineIdx === 0) return
   gMeme.selectedLineIdx--
   gMeme.lines.pop()
-  // console.log(gMeme.lines)
 }
 
 
 // Switch text lines
 function switchLines() {
   _rotateAnArrayByOne(gMeme.lines, gMeme.lines.length)
+  // console.log(gMeme.selectedLineIdx)
 }
 
 
