@@ -1,5 +1,8 @@
 'use strict'
 
+// global variables
+let gIsDownload = false
+
 
 // Global Canvas and context
 const gElCanvas = document.querySelector('.main-editor-canvas')
@@ -21,6 +24,8 @@ const gMeme = {
   ],
 }
 
+
+
 // Draw the text
 function drawText(userTxt) {
   for (let i = 0; i <= gMeme.selectedLineIdx; i++) {
@@ -31,8 +36,20 @@ function drawText(userTxt) {
     gCtx.fillText(userTxt[i].txt, userTxt[i].x, userTxt[i].y)
     gCtx.strokeText(userTxt[i].txt, userTxt[i].x, userTxt[i].y)
   }
+  if (!gIsDownload) drawSquareOutline(gMeme.lines[memeIdx()])
 }
 
+
+// draw Square outline
+function drawSquareOutline(userTxt) {
+  let textWidth = gCtx.measureText(userTxt.txt).width
+  let x = userTxt.x
+  let y = userTxt.y
+  gCtx.beginPath();
+  gCtx.rect(x - 10, y + 10, textWidth + 20, -userTxt.size - 10)
+  gCtx.strokeStyle = 'green'
+  gCtx.stroke()
+}
 
 // Return Global Meme
 function getMeme() {

@@ -139,11 +139,13 @@
 
   .download-share-section {
     flex-direction: column;
-    left: 0;
   }
 
   .download-share-section .share {
     margin-block-end: 1rem;
+  }
+  .download-share-section .download {
+    width: 100%;
   }
 
   .control-meme-text-container .btn {

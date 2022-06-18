@@ -44,6 +44,7 @@
   position: absolute;
   top: 20rem;
   z-index: -1;
+  opacity: 0;
 }
 
 .visual-effects-tool-container {
@@ -82,7 +83,7 @@
 .download-share-section {
   position: relative;
   bottom: 1rem;
-  left: 1rem;
+  justify-content: space-between;
 }
 
 .change-color {
@@ -107,4 +108,10 @@
 
 .btn {
   cursor: pointer;
+  transition: filter 0.5s;
+}
+
+.btn:hover {
+  filter: contrast(200%);
+  transform: translateY(-2px);
 }

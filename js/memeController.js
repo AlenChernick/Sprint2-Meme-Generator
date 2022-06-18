@@ -7,7 +7,6 @@ function onInit() {
 // render img on canvas
 function renderImgOnCanvas() {
   let elImg = document.querySelector('.selected-meme')
-  // console.log(elImg)
   gCtx.drawImage(elImg, 0, 0, gElCanvas.width, gElCanvas.height)
 }
 
