@@ -11,22 +11,65 @@ const gElCanvas = document.querySelector('.main-editor-canvas')
 const gCtx = gElCanvas.getContext('2d')
 
 // Global meme
-const gMeme = {
-  selectedImgId: 1,
-  selectedLineIdx: 0,
-  lines: [
-    {
-      txt: 'Enter Meme Text',
-      size: 35,
-      color: 'white',
-      font: 'Impact',
-      x: gElCanvas.width / 4,
-      y: 50,
-      isDrag: false,
-    },
-  ],
+let gMeme
+
+
+//Check if the click is inside the text
+function isTextClicked(clickedPos) {
+  let lineIdx = gMeme.lines.findIndex(line => {
+    const lineArea = getLineArea(line)
+    // console.log(lineArea);
+    // console.log(clickedPos);
+    // console.log(line);
+    return lineArea.x < clickedPos.x &&
+      lineArea.x + lineArea.width > clickedPos.x
+      && lineArea.y > clickedPos.y && lineArea.y - lineArea.height < clickedPos.y
+  })
+  return lineIdx
 }
 
+
+
+function getLineArea(line) {
+  if (!gMeme.lines.length) return;
+  // let line = gMeme.lines[gMeme.selectedLineIdx];
+  return {
+    x: line.x - 3,
+    y: line.y,
+    width: line.width + 5,
+    height: line.size + 3,
+  };
+}
+
+
+
+function setSelectedLine(lineIdx) {
+  const line = gMeme.lines.splice(lineIdx, 1)[0]
+  gMeme.lines.push(line)
+}
+
+
+function setTextDrag(isDrag) {
+  const line = gMeme.lines[memeIdx()]
+  line.isDrag = isDrag
+  // console.log(line)
+}
+
+function moveText(dx, dy) {
+  gStartPos.x += dx
+  gStartPos.y += dy
+}
+
+
+function getCurrLine() {
+  return gMeme.lines[memeIdx()]
+}
+
+
+//Set which id selected
+function setImage(imgId) {
+  gMeme.selectedImgId = imgId
+}
 
 // Return Global Meme
 function getMeme() {
@@ -64,6 +107,7 @@ function drawSquareOutline(userTxt) {
 }
 
 
+
 // Get meme line index
 function memeIdx() {
   return gMeme.selectedLineIdx
@@ -86,7 +130,7 @@ function changeFontSize(plusOrMinus) {
 }
 
 // Get meme line text and changes depends on user click
-function moveLine(plusOrMinus) {
+function moveText(plusOrMinus) {
   gMeme.lines[memeIdx()].y += 25 * plusOrMinus
 }
 
@@ -124,7 +168,9 @@ function addLine(text = 'Enter Meme Text') {
       color: 'white',
       font: 'Impact',
       x: gElCanvas.width / 4,
-      y: gElCanvas.height / 1.1,
+      y: gElCanvas.height / 2,
+      width: 250,
+      isDrag: false,
     })
 
   }
@@ -135,7 +181,9 @@ function addLine(text = 'Enter Meme Text') {
       color: 'white',
       font: 'Impact',
       x: gElCanvas.width / 4,
-      y: gElCanvas.height / 2,
+      y: gElCanvas.height / 1.1,
+      width: 250,
+      isDrag: false,
     })
 
   }
@@ -149,6 +197,8 @@ function addLine(text = 'Enter Meme Text') {
       font: 'Impact',
       x: gElCanvas.width / 4,
       y,
+      width: 250,
+      isDrag: false,
     })
   }
   gMeme.selectedLineIdx++
@@ -176,6 +226,6 @@ function _rotateAnArrayByOne(array, arrayLength) {
     i
   for (i = arrayLength - 1; i > 0; i--) array[i] = array[i - 1]
   array[0] = idx
-  // console.log(array[0])
+  console.log(array[0])
 }
 

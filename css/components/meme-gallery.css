@@ -16,7 +16,9 @@
   margin-right: 1rem;
   font-size: 1.301875rem;
   border: none;
+  outline: none;
   font-family: poppins-light;
+  color: white;
 }
 
 input.search-input {
@@ -59,7 +61,7 @@ input.search-input {
 
 .meme-gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(175.55px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
   grid-gap: 20px;
   padding: 2rem 2rem;
 }

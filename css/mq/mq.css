@@ -137,7 +137,7 @@
   }
 
   .download-share-section .share {
-    margin-block-end: 1rem;
+    width: 100%;
   }
   .download-share-section .download {
     width: 100%;
@@ -160,6 +160,10 @@
   .meme-gallery {
     grid-template-columns: repeat(2, 1fr);
     padding: 2rem 0.2rem;
+  }
+
+  .upload-container {
+    font-size: 0.9rem;
   }
 }
 
@@ -212,7 +216,7 @@
   }
 
   .main-editor-canvas {
-    margin-inline-start: 25.0625rem;
+    margin-inline-start: 22.9rem;
     margin-inline-end: 1rem;
   }
 
