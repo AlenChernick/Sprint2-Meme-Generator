@@ -226,6 +226,6 @@ function _rotateAnArrayByOne(array, arrayLength) {
     i
   for (i = arrayLength - 1; i > 0; i--) array[i] = array[i - 1]
   array[0] = idx
-  console.log(array[0])
+  // console.log(array[0])
 }
 

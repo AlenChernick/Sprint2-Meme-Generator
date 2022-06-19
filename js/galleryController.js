@@ -19,12 +19,6 @@ function onImgSelect(imgId) {
   renderCanvas()
 }
 
-// Toggle Menu
-function onToggleMenu() {
-  document.body.classList.toggle('menu-open')
-}
-
-
 
 // Get Back to homepage //Gallery
 function onReturnToGallery() {
@@ -37,6 +31,11 @@ function onReturnToGallery() {
   initMeme()
 }
 
+
+// Toggle Menu
+function onToggleMenu() {
+  document.body.classList.toggle('menu-open')
+}
 
 
 // another way //
